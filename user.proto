@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = ".;proto";
+package proto;
+
+message UserLoginReq {
+  string name = 1;
+}
+
+message UserLoginRes {
+  string greet = 1;
+}
+
+service Server {
+  rpc UserLogin(UserLoginReq) returns (UserLoginRes);
+}
