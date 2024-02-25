@@ -9,10 +9,10 @@ type ServerRpc struct {
 	UnimplementedServerServer
 }
 
-func NewRpcServer() {
+func NewRpcServer(host string) {
 	grpcServer := grpc.NewServer()
 	u := &ServerRpc{}
-	listen, err := net.Listen("tcp", ":8080")
+	listen, err := net.Listen("tcp", host)
 	if err != nil {
 		panic(err)
 	}
