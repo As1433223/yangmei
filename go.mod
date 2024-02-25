@@ -1,4 +1,4 @@
-module proto
+module github.com/As1433223/yangmei
 
 go 1.21
 
